@@ -137,6 +137,6 @@ The notebook covers model training, evaluation, and inference. A production depl
 
 ---
 
-*Built by Mylie — Data Science MS, Stevens Institute of Technology*  
+*Built by Mylie*  
 *[Portfolio](https://mylienow.vercel.app) · [LinkedIn](https://linkedin.com/in/your-handle)*
 # AdClick_Prediction_CaseStudy
