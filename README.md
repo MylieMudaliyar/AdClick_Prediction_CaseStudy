@@ -1,6 +1,6 @@
 # Ad Click Prediction — End-to-End Classification Study
 
-> **Can we predict whether an internet user will click on an advertisement — and turn that prediction into actionable targeting strategy?**
+> **Can we predict whether an internet user will click on an advertisement, and turn that prediction into actionable targeting strategy?**
 
 This project builds a production-oriented binary classification pipeline on an advertising dataset. It goes beyond fitting a model: the goal is to answer a real business question, understand *why* users click, and surface recommendations a marketing team can act on.
 
