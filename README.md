@@ -8,7 +8,7 @@ This project builds a production-oriented binary classification pipeline on an a
 
 ## The Business Problem
 
-Digital advertising operates on probability. Every time an ad is served, the platform is making a bet: *will this user engage?* Serving ads to users who won't click wastes budget. Missing users who would have clicked loses revenue. A well-calibrated click prediction model sits at the center of this trade-off — and the difference between a 0.5 decision threshold and an optimized one can be measured directly in campaign P&L.
+Digital advertising operates on probability. Every time an ad is served, the platform is making a bet: *will this user engage?* Serving ads to users who won't click wastes budget. Missing users who would have clicked loses revenue. A well-calibrated click prediction model sits at the center of this trade-off, and the difference between a 0.5 decision threshold and an optimized one can be measured directly in campaign P&L.
 
 **Dataset:** 1,000 users with demographic, behavioral, and contextual features. Binary target: `Clicked on Ad` (1 = clicked, 0 = did not click).
 
@@ -36,7 +36,7 @@ Expanded from 2 raw features to 20 engineered features across four categories:
 The `site_concentration_ratio` feature (time on site ÷ total internet usage) turned out to be one of the strongest engineered signals — users whose site visit represents a focused, intentional session are more likely to convert.
 
 ### 3. Multi-Model Benchmarking
-Evaluated 5 models under 5-fold stratified cross-validation — not a single train/test split — so comparisons are statistically reliable:
+Evaluated 5 models under 5-fold stratified cross-validation, not a single train/test split — so comparisons are statistically reliable:
 
 | Model | CV AUC (mean ± std) |
 |---|---|
@@ -88,7 +88,7 @@ Packaged the full pipeline (feature engineering + model + threshold) into a sing
 
 **4. Threshold selection is a business decision.** The gap between the F1-optimal threshold and the expected-value-optimal threshold represents real revenue. This decision belongs jointly with marketing and finance, not just the data team.
 
-**5. Calibration matters as much as AUC.** XGBoost achieves higher AUC, but Logistic Regression's well-calibrated probabilities make it preferable when outputs feed into bid pricing logic — an overconfident model that scores 0.9 when the true probability is 0.6 causes systematic overbidding.
+**5. Calibration matters as much as AUC.** XGBoost achieves higher AUC, but Logistic Regression's well-calibrated probabilities make it preferable when outputs feed into bid pricing logic, an overconfident model that scores 0.9 when the true probability is 0.6 causes systematic overbidding.
 
 ---
 
